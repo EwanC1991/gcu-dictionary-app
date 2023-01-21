@@ -1,3 +1,37 @@
 .App {
   text-align: center;
+  background-color: #19535F;
+  color: #D7C9AA;
+  margin: 10px;
+  border-radius: 15px;
+  font-family: "App";
+}
+
+.main-container>h1 {
+
+  text-decoration: underline;
+}
+
+.word-display>h3 {
+
+  text-decoration: underline;
+}
+
+.favourites-list>h2 {
+
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "App";
+  src: url("./fonts/Voces-Regular.ttf") format("truetype");
+}
+
+.main-container {
+  border: 6px solid #0B7A75;
+  border-radius: 15px;
+}
+
+.favourites-list>ul>li {
+  list-style: none;
 }
