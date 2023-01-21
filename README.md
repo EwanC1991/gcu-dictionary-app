@@ -4,12 +4,12 @@ An app I made for GCU tech test.
 
 To run:
 
-In server:
-npm install
-npm run seeds
-npm run server:dev
+In server: <br>
+npm install <br>
+npm run seeds <br>
+npm run server:dev <br><br>
 
-In client:
-npm install
-npm start
+In client: <br>
+npm install <br>
+npm start <br>
 
