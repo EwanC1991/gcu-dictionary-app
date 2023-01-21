@@ -20,7 +20,7 @@ const MainContainer = () => {
         <div className="main-container">
             <h1>GCU Dictionary App</h1>
             <WordBox searchWord={searchWord} />
-            <WordDisplay />
+            <WordDisplay displayWord={displayWord} />
             {/* <FavouritesList /> */}
 
         </div>
