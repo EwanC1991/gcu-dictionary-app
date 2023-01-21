@@ -31,8 +31,6 @@ const WordBox = ({ searchWord }) => {
                     placeholder="Type a Word" type="text" value={input}>
                 </input>
             </form>
-
-
         </div>
     )
 

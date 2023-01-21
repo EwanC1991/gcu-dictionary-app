@@ -5,7 +5,7 @@ import FavouritesListItem from "./FavouritesListItem";
 const FavouritesList = ({ favourites, onClick, capitialize }) => {
 
     const favouriteNodes = favourites.map((favourite, index) => {
-        return <FavouritesListItem favourite={favourite} key={index} onClick={onClick} capitialize={capitialize} />
+        return <FavouritesListItem favourite={favourite} key={favourite._id} onClick={onClick} capitialize={capitialize} />
     })
 
 

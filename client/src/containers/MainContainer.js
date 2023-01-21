@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import WordBox from "../components/WordBox";
 import WordDisplay from "../components/WordDisplay";
 import FavouritesList from "../components/FavouritesList";
+import FavouritesService from "../services/FavouritesService";
 
 
 const MainContainer = () => {
@@ -10,7 +11,8 @@ const MainContainer = () => {
     const [favourites, setFavourites] = useState([]);
 
     useEffect(() => {
-        setFavourites([])
+        FavouritesService.getFavourites()
+            .then(favourites => setFavourites(favourites))
     }, []);
 
 
@@ -31,7 +33,9 @@ const MainContainer = () => {
     const addToFavourites = () => {
         console.log(displayWord[0]);
         const copyFavourites = [...favourites, displayWord[0]];
+        FavouritesService.addFavourites(displayWord[0]);
         setFavourites(copyFavourites);
+
 
     }
 
@@ -42,7 +46,7 @@ const MainContainer = () => {
             <h1>GCU Dictionary App</h1>
             <WordBox searchWord={searchWord} />
             {displayWord.length > 0 ? <WordDisplay displayWord={displayWord} addToFavourites={addToFavourites} capitialize={capitialize} /> : null}
-            <FavouritesList favourites={favourites} onClick={onClick} capitialize={capitialize} />
+            {favourites.length > 0 ? <FavouritesList favourites={favourites} onClick={onClick} capitialize={capitialize} /> : null}
 
         </div>
     )
